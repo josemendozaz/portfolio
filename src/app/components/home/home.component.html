@@ -1,0 +1,166 @@
+<div class="nav-header pt-5">
+	<div class="menu w-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-4 cursor-pointer">
+					<h1 class="d-inline text-light-green"> {{ '\<C/>' }} </h1>
+					<h2 class="d-inline text-white m-auto">José Mendoza</h2>
+				</div>
+				<div class="col-4"></div>
+				<div class="col-1 text-center text-white m-auto cursor-pointer">
+					<a [routerLink]="'/'" fragment="skills" (click)="onClickButton( 'skills' )">
+						Habilidades
+					</a>
+				</div>
+				<div class="col-1 text-center text-white m-auto cursor-pointer">
+					<a [routerLink]="'/'" fragment="works" (click)="onClickButton( 'works' )">
+						Trabajos
+					</a>
+				</div>
+				<div class="col-1 text-center text-white m-auto cursor-pointer">
+					<img class="text-light-green" src="/social-network/icon-instagram.png" alt="">
+					<a href="https://www.instagram.com/josemendozaz93/" target="_blank">
+						Github
+					</a>
+				</div>
+				<div class="col-1 text-center text-white m-auto cursor-pointer">
+					<img class="text-light-green" src="/social-network/github.png" alt="">
+					<a href="https://github.com/josemendozaz" target="_blank">
+						Github
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mt-4 mb-2">
+		<div class="w-100">
+			<mat-divider class="mat-divider-nav"></mat-divider>
+		</div>
+	</div>
+</div>
+<div class="about-me pt-2">
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-light-green text-center h1-super-title pb-2">
+				Desarrollador de Software
+			</h1>
+			<div class="col-4">
+				<div class="card-info m-auto">
+					<div class="col-12 text-center">
+						<img class="avatar" src="/image/foto_jmz_profile.png" alt="">
+					</div>
+					<div class="col-12 text-center mt-2">
+						<h5 class="text-light-green">
+							José Mendoza Zavala
+						</h5>
+						<small class="text-light-green ">
+							Full-stack developer
+						</small>
+					</div>
+					<div class="col-12 mt-4">
+						<div class="row">
+							<!-- EMAIL -->
+							<div class="col-2 text-end">
+								<img class="text-light-green" src="icon-profile/icon-mail.png" alt="">
+							</div>
+							<div class="col-10 text-start">
+								<span class="text-light-green">
+									{{ 'josemendozaz1993@gmail.com' }}
+								</span>
+							</div>
+							<!-- LOCATION -->
+							<div class="col-2 text-end">
+								<img class="text-light-green" src="icon-profile/icon-map-pin.png" alt="">
+							</div>
+							<div class="col-10 text-start">
+								<span class="text-light-green">
+									Venezuela
+								</span>
+							</div>
+							<!-- BRIEFCASE -->
+							<div class="col-2 text-end">
+								<img class="text-light-green" src="icon-profile/icon-briefcase.png" alt="">
+							</div>
+							<div class="col-10 text-start">
+								<span class="text-light-green">
+									Freelancer
+								</span>
+							</div>
+							<!-- BRIEFCASE -->
+							<div class="col-2 text-end">
+								<img class="text-light-green" src="icon-profile/icon-link.png" alt="">
+							</div>
+							<div class="col-10 text-start">
+								<span class="text-light-green">
+									www.josedev.com
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="mt-3 container ps-0 pe-0">
+						<div class="row justify-content-center">
+							<div class="col-2 text-center ps-1 pe-1">
+								<div class="tag"> HTML </div>
+							</div>
+							<div class="col-2 text-center ps-1 pe-1">
+								<div class="tag text-center fw-bold"> CSS </div>
+							</div>
+							<div class="col-2 text-center ps-1 pe-1">
+								<div class="tag text-center fw-bold"> JS </div>
+							</div>
+							<div class="col-2 text-center ps-1 pe-1">
+								<div class="tag text-center fw-bold"> PHP </div>
+							</div>
+							<div class="col-2 text-center ps-1 pe-1">
+								<div class="tag text-center fw-bold"> SQL </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 m-auto">
+				<div class="box-about-me text-light-green">
+					<small class="small-about-box"> {{ '\<h1>' }} </small>
+					<h1 class="ps-3 fw-bold">
+						Hola!,<br>
+						Soy <span class="text-light-green">José Mendoza</span><small class="small-about-box"> {{ '\</h1>' }}</small>
+					</h1>
+					<br>
+					<small class="small-about-box"> {{ '\<p>' }} </small>
+					<p class="mb-0 ps-3">
+							Ingeniero de Sistema, especializado en el desarrollo web con lenguajes como HTML, CSS, JavaScript, PHP. Soy una persona con motivación y optimista, dedicado a escribir código claro, conciso y robusto. Me esfuerzo por aprender y mejorar constantemente.
+					</p>
+					<small class="small-about-box"> {{ '\</p>' }} </small>
+				</div>
+			</div>
+			<div class="col-2 m-auto">
+				<div class="box-items p-4">
+					<div class="row pt-4 pb-4">
+						<div class="col-2 justify-content-center">
+							<h2>4</h2>
+						</div>
+						<div class="col-10 justify-content-center">
+							Lenguajes de Programación
+						</div>
+					</div>
+					<div class="row pb-4">
+						<div class="col-2 justify-content-center">
+							<h2>5</h2>
+						</div>
+						<div class="col-10 justify-content-center">
+							Herramientas de desarollo
+						</div>
+					</div>
+					<div class="row pb-4">
+						<div class="col-2 justify-content-center">
+							<h2>6</h2>
+						</div>
+						<div class="col-10 justify-content-center">
+							Años de Experiencia
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

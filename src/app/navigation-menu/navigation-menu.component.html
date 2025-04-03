@@ -1,0 +1,23 @@
+<div class="navigation-bar-micro-container">
+	<div class="navigation-bar-micro">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 cursor-pointer p-0 m-auto text-center mt-2 mb-2" matTooltip="Inicio" matTooltipPosition="right">
+					<a [routerLink]="['/']" fragment="home" (click)="onClickButton( 'home' )">
+						<img src="menu-icons/icon-user.png" alt="">
+					</a>
+				</div>
+				<div class="col-12 cursor-pointer p-0 m-auto text-center mt-2 mb-2" matTooltip="Habilidades" matTooltipPosition="right">
+					<a [routerLink]="'/'" fragment="skills" (click)="onClickButton( 'skills' )">
+						<img src="menu-icons/icon-code.png" alt="">
+					</a>
+				</div>
+				<div class="col-12 cursor-pointer p-0 m-auto text-center mt-2 mb-2" matTooltip="Trabajos" matTooltipPosition="right">
+					<a [routerLink]="'/'" fragment="works" (click)="onClickButton( 'works' )">
+						<img src="menu-icons/icon-monitor.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

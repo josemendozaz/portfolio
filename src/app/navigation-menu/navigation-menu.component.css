@@ -1,0 +1,25 @@
+.navigation-bar-micro-container {
+	top			:40vh;
+	bottom		: 0;
+	position	: fixed;
+	margin		: auto;
+	left		: 20px;
+	z-index		: 100;
+}
+.navigation-bar-micro {
+	border-width				: 1px;
+    border-style				: solid;
+    border-color				: black;
+    width						: 55px;
+	height						: auto;
+    border						: 2px solid #fff;
+    background-color			: #1A1E23;
+    padding						: 10px;
+	border-top-left-radius		: 25px;
+    border-top-right-radius		: 25px;
+    border-bottom-left-radius	: 25px;
+    border-bottom-right-radius	: 25px;
+}
+.navigation-bar-micro img {
+	width : 30px;
+}

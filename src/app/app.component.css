@@ -1,0 +1,21 @@
+.home-section {
+	background-color	: #292F36;
+}
+.skills-section-app {
+	position	: relative;
+}
+.skills-section {
+	background-color	: #1A1E23;
+	position			: relative;
+}
+.skills-section-bg {
+	background-image		: url(/background/circuit.png);
+	background-color		: rgba(26, 30, 35, 1);
+	background-blend-mode	: overlay;
+	background-position		: left;
+	background-repeat		: no-repeat;
+	background-size			: auto;
+	height					: 100%;
+	width					: 100%;
+	position				: absolute;
+}
