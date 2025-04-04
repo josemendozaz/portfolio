@@ -70,3 +70,12 @@
 	font-weight	: 400;
 	font-size	: 14px;
 }
+.arrow-section {
+	width		: 4vw;
+	animation	: 2s ease 0s infinite normal none running pulse;
+}
+@keyframes pulse {
+	0% { transform: translate( 0px, 0px ); }
+	70% { transform: translate( 0px, 20px ); }
+	100% { transform: translate( 0px, 0px ); }
+}

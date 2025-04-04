@@ -32,13 +32,6 @@ export class HomeComponent {
 	 */
 	constructor() {}
 	/**
-	 * @function		onClickButton
-	 * @description		Botón del nav menu flotante
-	 */
-	onClickButton( fragment : string ){
-		document!.querySelector( `#${fragment!}` )!.scrollIntoView();
-	}
-	/**
 	 * @function		ngOnInit
 	 * @description		Ciclo de vida Init, carga al terminar de iniciar la pagina
 	 */
@@ -47,5 +40,12 @@ export class HomeComponent {
 			AOS.init();
 			window.addEventListener('load', AOS.refresh)
 		}, 12000);
+	}
+	/**
+	 * @function		onClickButton
+	 * @description		Botón del nav menu flotante
+	 */
+	onClickButton( fragment : string ){
+		document!.querySelector( `#${fragment!}` )!.scrollIntoView();
 	}
 }
