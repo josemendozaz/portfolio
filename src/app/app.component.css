@@ -1,3 +1,43 @@
+/* Spinner Screen Loading */
+.spinner-container {
+	position			: fixed;
+    height				: 100%;
+    left				: 0;
+    right				: 0;
+    bottom				: 0;
+    top					: 0;
+    margin				: auto;
+    z-index				: 99999999;
+    background-color	: rgba(0,0,0,0.95);
+	text-align			: center;
+}
+.spinner-container mat-spinner {
+	left		: 0;
+    right		: 0;
+    bottom		: 0;
+    top			: 0;
+	position	: fixed;
+    height		: 100px;
+    width		: 100px;
+    margin		: auto;
+}
+.spinner-container .spinner-logo {
+    top			: 0;
+    bottom		: 0;
+    left		: 0;
+    right		: 0;
+    margin		: auto;
+    width		: 6rem;
+}
+.spinner-container h4 {
+	display			: flex;
+    justify-content	: center;
+    align-content	: center;
+    flex-direction	: column;
+    top				: 5rem;
+}
+
+
 .home-section {
 	background-color	: #292F36;
 }
@@ -15,6 +55,27 @@
 	background-position		: left;
 	background-repeat		: no-repeat;
 	background-size			: auto;
+	height					: 100%;
+	width					: 100%;
+	position				: absolute;
+}
+
+
+
+.works-section-app {
+	position	: relative;
+}
+.works-section {
+	background-color	: #1A1E23;
+	position			: relative;
+}
+.works-section-bg {
+	background-image		: url(/background/pc-bg2.jpg);
+	background-color		: rgba(26, 30, 35, 1);
+	background-blend-mode	: overlay;
+	background-position		: left;
+	background-repeat		: no-repeat;
+	background-size			: cover;
 	height					: 100%;
 	width					: 100%;
 	position				: absolute;

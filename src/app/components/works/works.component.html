@@ -1,1 +1,73 @@
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium possimus perferendis hic necessitatibus libero veritatis labore quia nobis numquam, velit inventore tenetur aliquid incidunt maiores veniam cum distinctio, id explicabo!
+<div class="skills pt-5">
+	<div class="container">
+		<div class="row row-skills-title pt-2">
+			<div class="col-12 text-center">
+				<h2 class="text-light-green">Proyectos</h2>
+				<div class="arrow m-auto"></div>
+				<h5 class="mt-4 text-light-green">Proyetos desarrollados</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						@for ( work of works; track work.id ) {
+							@if ( work ) {
+								<div class="carousel-item carousel-item-section {{ work.id == 1 ? 'active' : '' }}">
+									<div class="container">
+										<div class="row">
+											<div class="col-7 ps-5 pe-5">
+												<div id="carouselImg" class="carousel slide">
+													<div class="carousel-indicators">
+														@for( img of work.imgs; track $index ) {
+															<button type="button" data-bs-target="#carouselImg" [attr.data-bs-slide-to]="$index" [class]="$index == 0 ? 'active' : ''" [attr.aria-current]="$index == 0 ? 'true' : 'false'" [attr.aria-label]="'Slide' + $index"></button>
+														}
+													</div>
+												</div>
+
+
+												<!-- <owl-carousel-o class="owl-bank-wallet owl-carousel owl-loaded owl-drag mb-4" [options]="customOptionsCarrousel" #owlSecurity>
+													@for ( img of work.imgs; track $index ) {
+														<ng-template id="cutting_and_theft" [attr.data-slide-item]="$index" carouselSlide class="slide">
+															<img src="/works/projects/{{ work.id }}/{{ img }}" class="d-block w-100" alt="...">
+														</ng-template>
+													}
+												</owl-carousel-o> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+											</div>
+											<div class="col-5 pt-5 pb-5">
+												<h1>{{ work.title }}</h1>
+												<p>{{ work.description }}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							}
+						}
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,9 +1,17 @@
+.nav-header-name h1 {
+	font-size		: 2.616vw;
+}
+.nav-header-name h2 {
+	font-size		:  2.095vw;
+}
 .nav-header a {
 	text-decoration	: none;
 	color 			: white;
+	font-size		: 1.05vw;
 }
 .h1-super-title {
-	font-size: 55px;
+	/* font-size	: 55px; */
+	font-size	: 3.6vw;
 }
 .card-info {
 	border						: #98FAEC 3px solid;
@@ -14,33 +22,42 @@
 	-moz-box-shadow				: -2px -1px 1px 0px rgba(255,255,255,1);
 	box-shadow					: -2px -1px 1px 0px rgba(255,255,255,1);
 	width						: 80%;
-    height						: 32rem;
+	height						: 32rem;
 }
 .card-info .avatar {
-	width			: 70%;
-    border-radius	: 50%;
-    margin			: 0 auto;
-    box-shadow		: 0 0 10px rgba(0, 0, 0, .2);
+	width			: 60%;
+	border-radius	: 50%;
+	margin			: 0 auto;
+	box-shadow		: 0 0 10px rgba(0, 0, 0, .2);
 }
 .card-info span {
 	font-size: 14px;
 }
 .tag {
-    border-radius: 10px;
-    background-color: #12f7d6;
-    color: black;
-    font-size: 12px;
+	border-radius		: 10px;
+	background-color	: #12f7d6;
+	color				: black;
+	font-size			: 12px;
 }
 .mat-divider-nav {
-    border-top-color	: #43454D;
+	border-top-color	: #43454D;
 }
 .small-about-box {
-	font-size: 14px;
+	font-size	: 14px;
 }
 .box-items {
-	width: 100%;
-	background-color: #1A1E23;
-	height: 100%;
-	color: white;
-	border-radius: 80px;
+	width				: 100%;
+	background-color	: #1A1E23;
+	height				: 100%;
+	color				: white;
+	border-radius		: 80px;
+}
+.arrow {
+	width		: 4vw;
+	animation	: 2s ease 0s infinite normal none running pulse;
+}
+@keyframes pulse {
+	0% { transform: translate( 0px, 0px ); }
+	70% { transform: translate( 0px, 20px ); }
+	100% { transform: translate( 0px, 0px ); }
 }

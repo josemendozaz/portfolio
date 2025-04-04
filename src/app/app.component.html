@@ -1,15 +1,28 @@
+<!-- SCREEN LOADING -->
+@if( screenLoadingService.getValue ) {
+	<div class="spinner-container text-center">
+		<mat-spinner class="position-absolute white" strokeWidth="5" [diameter]="150"></mat-spinner>
+		<img class="position-absolute spinner-logo" src="/logo_jmz.png" onError="this.onerror=null;this.src='../../../../assets/images/logos/sigesco-spinner.png';">
+		<h4 class="position-absolute mt-5 w-100 h-100 d-flex text-light-green">Espere un momento por favor...</h4>
+	</div>
+}
 <!-- NAVIGATION MENU -->
 <app-navigation-menu></app-navigation-menu>
 <!-- HOME SECTION -->
 <div id="home" [style.height]="innerWidth + 'px'" class="home-section">
-	<app-home ></app-home>
+	<app-home  data-aos="flip-left"
+	data-aos-easing="ease-out-cubic"
+	data-aos-duration="2000"></app-home>
 </div>
 <!-- SKILLS SECTION -->
 <div id="skills" [style.height]="innerWidth + 'px'" class="skills-section">
 	<div class="skills-section-bg"></div>
-	<app-skills class="skills-section-app"></app-skills>
+	<app-skills class="skills-section-app" data-aos="flip-left"
+	data-aos-easing="ease-out-cubic"
+	data-aos-duration="2000"></app-skills>
 </div>
 <!-- WORKS SECTION -->
 <div id="works" [style.height]="innerWidth + 'px'" class="works-section">
-	<app-works></app-works>
+	<div class="works-section-bg"></div>
+	<app-works class="works-section-app"></app-works>
 </div>
