@@ -22,6 +22,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ScreenLoadingService } from './services/screen-loading.service';
 /**
  * @class			AppComponent
+ *
  * @description		Componente que contiene la sección de trabajos realizados
  *
  */
