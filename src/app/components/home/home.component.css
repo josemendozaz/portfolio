@@ -61,58 +61,6 @@
 	70% { transform: translate( 0px, 20px ); }
 	100% { transform: translate( 0px, 0px ); }
 }
-/* Extra pequeño (móviles pequeños, menos de 576px) */
-@media (max-width: 575.98px) {
-	.nav-header-name h1 {
-		font-size		: 3vw; /* 8 */
-	}
-	.nav-header-name h2 {
-		font-size		: 3vw; /* 8 */
-	}
-	.nav-header a {
-		font-size		: 3vw;
-	}
-	.nav-header .link-a {
-		margin-top	: 0vw!important;
-	}
-	.h1-super-title {
-		font-size	: 7vw;
-	}
-	.block-one {
-		margin-top : 5vw!important;
-	}
-	.block-two {
-		margin-top : 5vw!important;
-	}
-	.block-three {
-		margin-top		: 5vw!important;
-		margin-bottom	: 10vw !important;
-	}
-	.card-info span {
-		font-size: 12px;
-	}
-	.tag {
-    	font-size: 8px;
-	}
-	.box-about-me {
-    	padding-left	: 15vw;
-    	padding-right	: 5vw;
-	}
-	.box-about-me h1 {
-		font-size	: 22px;
-	}
-	.about-me .block-three .box-items {
-		width			: 70%;
-		border-radius	: 80px;
-		margin			: auto;
-	}
-	.about-me .block-three .box-items h2 {
-		font-size	: 13vw;
-	}
-	.about-me .block-three .box-items .text {
-		font-size	: 5vw;
-	}
-}
 /* ---------- RESPONSIVO ---------- */
 /* ////////// RESPONSIVO IPHONE / ANDROID / TABLE ////////// */
 /* iPhone Portrait */
@@ -182,6 +130,58 @@
 	}
 }
 /* ////////// RESPONSIVO GENERAL ////////// */
+/* Extra pequeño (móviles pequeños, menos de 576px) */
+@media (max-width: 575.98px) {
+	.nav-header-name h1 {
+		font-size		: 3vw; /* 8 */
+	}
+	.nav-header-name h2 {
+		font-size		: 3vw; /* 8 */
+	}
+	.nav-header a {
+		font-size		: 3vw;
+	}
+	.nav-header .link-a {
+		margin-top	: 0vw!important;
+	}
+	.h1-super-title {
+		font-size	: 7vw;
+	}
+	.block-one {
+		margin-top : 5vw!important;
+	}
+	.block-two {
+		margin-top : 5vw!important;
+	}
+	.block-three {
+		margin-top		: 5vw!important;
+		margin-bottom	: 10vw !important;
+	}
+	.card-info span {
+		font-size: 12px;
+	}
+	.tag {
+    	font-size: 8px;
+	}
+	.box-about-me {
+    	padding-left	: 15vw;
+    	padding-right	: 5vw;
+	}
+	.box-about-me h1 {
+		font-size	: 22px;
+	}
+	.about-me .block-three .box-items {
+		width			: 70%;
+		border-radius	: 80px;
+		margin			: auto;
+	}
+	.about-me .block-three .box-items h2 {
+		font-size	: 13vw;
+	}
+	.about-me .block-three .box-items .text {
+		font-size	: 5vw;
+	}
+}
 /* Pequeño (móviles grandes) */
 @media (min-width: 576px) and (max-width: 767.98px) {
 	/* Estilos para móviles grandes */

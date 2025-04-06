@@ -1,6 +1,6 @@
 <div class="works pt-5">
 	<div class="container">
-		<div class="row row-works-title pt-2">
+		<div class="row row-works-title pt-2" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
 			<div class="col-12 text-center">
 				<h2 class="text-light-green">Proyectos</h2>
 				<div class="arrow m-auto"></div>
@@ -9,7 +9,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div id="carouselExternal" class="carousel slide carousel-external" data-bs-ride="carousel">
+				<div id="carouselExternal" class="carousel slide carousel-external" data-bs-ride="carousel" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
 					<div class="carousel-inner">
 						@for ( work of works; track work.id ) {
 							@if ( work ) {
@@ -34,7 +34,7 @@
 															<swiper-slide lazy="true">
 																<lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
 																	<a [href]="'/works/projects/' + work.alias + '/' + img">
-																		<img loading="lazy" [src]="'/works/projects/' + work.alias + '/' + img" class="img-fluid w-100 h-100" style="object-fit: cover;" [alt]="'Preview ' + work.title" />
+																		<img loading="lazy" [src]="'/works/projects/' + work.alias + '/' + img" class="img-fluid w-100 h-100" style="object-fit: cover;" [alt]="'Preview ' + work.title + '<br>(Los datos presentados en estas imágenes son simulados y utilizados exclusivamente para propósitos de demostración)'" />
 																	</a>
 																</lightgallery>
 															</swiper-slide>

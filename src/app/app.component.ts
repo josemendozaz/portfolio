@@ -20,6 +20,7 @@ import { NavigationMenuComponent } from "./navigation-menu/navigation-menu.compo
 import { IsPlatformBrowserService } from './services/is-platform-browser.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ScreenLoadingService } from './services/screen-loading.service';
+import { FooterComponent } from './components/footer/footer.component';
 /**
  * @class			AppComponent
  *
@@ -29,13 +30,14 @@ import { ScreenLoadingService } from './services/screen-loading.service';
 @Component({
 	selector	: 'app-root',
 	imports		: [
-		RouterModule,			/* MODULE */
-		MaterialModule,			/* MODULE */
+		RouterModule,				/* MODULE */
+		MaterialModule,				/* MODULE */
 		MatProgressSpinnerModule,
-		HomeComponent,			/* COMPONENT */
-		SkillsComponent,		/* COMPONENT */
-		WorksComponent,			/* COMPONENT */
-		NavigationMenuComponent	/* COMPONENT */
+		HomeComponent,				/* COMPONENT */
+		SkillsComponent,			/* COMPONENT */
+		WorksComponent,				/* COMPONENT */
+		NavigationMenuComponent,	/* COMPONENT */
+		FooterComponent				/* COMPONENT */
 	],
 	templateUrl	: './app.component.html',
 	styleUrl	: './app.component.css'

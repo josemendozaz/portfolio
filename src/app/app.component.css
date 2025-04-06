@@ -76,6 +76,14 @@
 	width					: 100%;
 	position				: absolute;
 }
+.footer-section {
+	background-color	: #292F36;
+	height				: auto;
+    padding				: 0.2vh;
+    border-top-style	: solid;
+    border-top-color	: #43454D;
+    border-top-width	: 0.8px;
+}
 /* ---------- RESPONSIVO ---------- */
 /* ////////// RESPONSIVO IPHONE / ANDROID / TABLE ////////// */
 /* iPhone Portrait */
