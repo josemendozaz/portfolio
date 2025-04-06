@@ -31,10 +31,10 @@
 												>
 													@if ( work.imgs.length >= 3 ) {
 														@for ( img of work.imgs; track $index ) {
-															<swiper-slide>
+															<swiper-slide lazy="true">
 																<lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
 																	<a [href]="'/works/projects/' + work.alias + '/' + img">
-																		<img [src]="'/works/projects/' + work.alias + '/' + img" class="img-fluid w-100 h-100" style="object-fit: cover;" [alt]="'Preview ' + work.title" />
+																		<img loading="lazy" [src]="'/works/projects/' + work.alias + '/' + img" class="img-fluid w-100 h-100" style="object-fit: cover;" [alt]="'Preview ' + work.title" />
 																	</a>
 																</lightgallery>
 															</swiper-slide>
