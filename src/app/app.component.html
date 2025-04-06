@@ -9,20 +9,19 @@
 <!-- NAVIGATION MENU -->
 <app-navigation-menu></app-navigation-menu>
 <!-- HOME SECTION -->
-<div id="home" [style.height]="innerWidth + 'px'" class="home-section">
-	<app-home  data-aos="flip-left"
-	data-aos-easing="ease-out-cubic"
-	data-aos-duration="2000"></app-home>
+<div id="home" [style.height]="innerHeight + 'px'" class="home-section">
+	<!-- data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" -->
+	<app-home  ></app-home>
 </div>
 <!-- SKILLS SECTION -->
-<div id="skills" [style.height]="innerWidth + 'px'" class="skills-section">
+<div id="skills" [style.height]="innerHeight + 'px'" class="skills-section">
 	<div class="skills-section-bg"></div>
 	<app-skills class="skills-section-app" data-aos="flip-left"
 	data-aos-easing="ease-out-cubic"
 	data-aos-duration="2000"></app-skills>
 </div>
 <!-- WORKS SECTION -->
-<div id="works" [style.height]="innerWidth + 'px'" class="works-section">
+<div id="works" [style.height]="innerHeight + 'px'" class="works-section">
 	<div class="works-section-bg"></div>
 	<app-works class="works-section-app"></app-works>
 </div>

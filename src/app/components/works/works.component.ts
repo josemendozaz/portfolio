@@ -1,22 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, NgZone } from '@angular/core';
 import { WorksService } from '../../services/works.service';
 import { Work } from '../../interfaces/work.interface';
-import { JsonPipe } from '@angular/common';
-// import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ScreenLoadingService } from '../../services/screen-loading.service';
 /**
  * @class			WorksComponent
  * @description		Componente que contiene la sección de trabajos realizados
- *
  */
 @Component({
 	selector	: 'app-works',
-	imports		: [
-		// JsonPipe,
-		// BrowserModule, BrowserAnimationsModule,
-		// CarouselModule,
-	],
+	schemas		: [CUSTOM_ELEMENTS_SCHEMA],
+	imports		: [],
 	templateUrl	: './works.component.html',
 	styleUrl	: './works.component.css'
 })
@@ -26,36 +19,76 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
  *
  */
 export class WorksComponent {
-	// /**
-	//  * @var				customOptionsCarrousel
-	//  * @description		Opciones para el carrusel que muestra los balances de las cuentas
-	//  */
-	// public customOptionsCarrousel	: OwlOptions = {
-	// 	lazyLoad			: true,
-	// 	loop				: true,
-	// 	autoplay			: true,
-	// 	margin				: 0,
-	// 	nav					: false,
-	// 	center				: true,
-	// 	dots				: false,
-	// 	navSpeed			: 1400,
-	// 	autoplayTimeout		: 10000,
-	// 	autoplaySpeed		: 5000,
-	// 	autoplayHoverPause	: true,
-	// 	navText				: ['◀','▶'],
-	// 	responsive			: {
-	// 		0	: { items : 1 },
-	// 	},
-	// }
-
+	/**
+	 * @var				screenLoading
+	 * @description		Bandera que sirve para ocultar/mostrar las pantallas de carga
+	 */
+	public screenLoading	: boolean	= false;
+	/**
+	 * @var				slideChange
+	 * @description		Almacena todos los proyectos consultados en el servicio WorksService
+	 */
+	slideChange : boolean = false;
+	/**
+	 * @var				works
+	 * @description		Almacena todos los proyectos consultados en el servicio WorksService
+	 */
 	works : Work[] = [];
 	/**
-	 * @var				constructor
+	 * @method			constructor
 	 * @description		Constructor del componente
-	 *
 	 */
-	constructor( public worksService : WorksService ) {
+	constructor(
+		public zone					: NgZone,
+		public screenLoadingService	: ScreenLoadingService,
+		public worksService			: WorksService,
+	) {
 		this.works	= worksService.getAll();
-	}
 
+	}
+	/**
+	 * @method			ngAfterViewInit
+	 * @description		Ciclo de vida Init, carga despues de inicializar la vista
+	 */
+	ngAfterViewInit(): void {
+		const bootstrapCarousel = document.getElementById('carouselExternal')!;
+
+		if (!bootstrapCarousel) return;
+
+		bootstrapCarousel.addEventListener('slid.bs.carousel', () => {
+			this.slideChange	= true;
+			console.log('📸 Slide cambiado!');
+			this.initSwipers();
+		});
+		// Inicialización en primer render
+		this.initSwipers();
+	}
+	/**
+	 * @method			initSwipers
+	 * @description		Inicia/Reinicia el Carousel Swipers
+	 */
+	initSwipers() {
+		// Tiempo justo para que DOM se pinte post-transición
+		setTimeout(() => {
+			if ( this.slideChange ) { this.screenLoading	= true; }
+			const activeItem = document.querySelector('.carousel-item.active');
+			if (!activeItem) return;
+			const swiperEl = activeItem.querySelector('swiper-container') as any;
+			if (!swiperEl) {
+				console.warn('❗ No se encontró swiper en el slide activo');
+				return;
+			}
+			if (!swiperEl.swiper) {
+				swiperEl.initialize?.();
+				console.log('✅ Swiper inicializado en slide visible');
+				setTimeout( () => { if ( this.slideChange ) { this.screenLoading	= false; } }, 20000);
+			} else {
+				swiperEl.swiper.update();
+				swiperEl.swiper.slideTo(0);
+				swiperEl.swiper.autoplay?.start();
+				console.log('🔄 Swiper actualizado en slide visible');
+				setTimeout( () => { if ( this.slideChange ) { this.screenLoading	= false; } }, 20000);
+			}
+		}, 200);
+	}
 }

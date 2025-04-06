@@ -44,30 +44,33 @@ import { ScreenLoadingService } from './services/screen-loading.service';
  * @description		Componente que contiene la sección de trabajos realizados
  */
 export class AppComponent {
+	@HostListener('window:resize', ['$event'])
+	@HostListener("wheel", ["$event"])
 	/**
 	 * @var				loading : boolean
 	 * @description		variable boolean que indica si se debe mostrar el spinner de carga
 	 */
 	loading	: boolean	= true;
-
-
-	innerWidth : number	= 0;
+	/**
+	 * @var				innerHeight : number
+	 * @description		variable númerica que almacena el largo de la página
+	 */
+	innerHeight : number	= 0;
+	/**
+	 * @var				fragment : string
+	 * @description		variable string que almacena los id de los divs de los sections
+	 */
 	fragment: string | undefined;
-
-	@ViewChild('fullpageRef') fp_directive: ElementRef | undefined;
-	config: any;
-	fullpage_api: any;
-
-	title		: string	= 'portfolio_jmz';
+	/**
+	 * @var				isBrowser
+	 * @description		Variable que almacena un booleano que indica si es navegador o no
+	 */
 	isBrowser	: boolean	= false;
-	element: any;
-	@HostListener('window:resize', ['$event'])
-
-	@HostListener("wheel", ["$event"])
-	public onScroll(event: WheelEvent) {
-		// console.log( event );
-	}
-	// injector = inject(Injector);
+	/**
+	 * @method			onScroll
+	 * @description		Método para el scroll
+	 */
+	public onScroll( event: WheelEvent ) {}
 	/**
 	 * @function		constructor
 	 * @description		Constructor del componente
@@ -80,11 +83,10 @@ export class AppComponent {
 		private ngZone							: NgZone,
 		private router							: Router,
 	) {
-		console.log('this.loading');
-		console.log(this.loading);
 		this.isBrowser = this.isPlataformBrowserService.checkPlatformBrowser( this.platformId );
 		if ( this.isBrowser ) {
-			this.innerWidth = window.screen.height;
+			this.innerHeight = window.screen.height;
+			console.log( this.innerHeight );
 		}
 		router.events.subscribe( this._navigationInterceptor.bind(this) );
 	}

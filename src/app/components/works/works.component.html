@@ -9,48 +9,38 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+				<div id="carouselExternal" class="carousel slide carousel-external" data-bs-ride="carousel">
 					<div class="carousel-inner">
 						@for ( work of works; track work.id ) {
 							@if ( work ) {
 								<div class="carousel-item carousel-item-section {{ work.id == 1 ? 'active' : '' }}">
 									<div class="container">
 										<div class="row">
-											<div class="col-7 ps-5 pe-5">
-												<div id="carouselImg" class="carousel slide">
-													<div class="carousel-indicators">
-														@for( img of work.imgs; track $index ) {
-															<button type="button" data-bs-target="#carouselImg" [attr.data-bs-slide-to]="$index" [class]="$index == 0 ? 'active' : ''" [attr.aria-current]="$index == 0 ? 'true' : 'false'" [attr.aria-label]="'Slide' + $index"></button>
+											<div class="col-7 m-auto ps-5 pe-5">
+												<swiper-container
+													init="false"
+													speed="800"
+													class="swiper mySwiper"
+													slides-per-view="1"
+													navigation="true"
+													autoplay-delay="4000"
+													autoplay-disable-on-interaction="false"
+													autoplay-pause-on-mouse-enter="true"
+													loop="true"
+													style="width: auto; height: auto;"
+												>
+													@if ( work.imgs.length >= 3 ) {
+														@for ( img of work.imgs; track $index ) {
+															<swiper-slide>
+																<img [src]="'/works/projects/' + work.alias + '/' + img" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+															</swiper-slide>
 														}
-													</div>
-												</div>
-
-
-												<!-- <owl-carousel-o class="owl-bank-wallet owl-carousel owl-loaded owl-drag mb-4" [options]="customOptionsCarrousel" #owlSecurity>
-													@for ( img of work.imgs; track $index ) {
-														<ng-template id="cutting_and_theft" [attr.data-slide-item]="$index" carouselSlide class="slide">
-															<img src="/works/projects/{{ work.id }}/{{ img }}" class="d-block w-100" alt="...">
-														</ng-template>
 													}
-												</owl-carousel-o> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+												</swiper-container>
 											</div>
 											<div class="col-5 pt-5 pb-5">
-												<h1>{{ work.title }}</h1>
-												<p>{{ work.description }}</p>
+												<h3 class="text-start text-light-green">{{ work.title }}</h3><br>
+												<p class="text-justify text-light-green" [innerHtml]="work.description">{{ work.description }}</p>
 											</div>
 										</div>
 									</div>
@@ -58,11 +48,11 @@
 							}
 						}
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExternal" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
 					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExternal" data-bs-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>

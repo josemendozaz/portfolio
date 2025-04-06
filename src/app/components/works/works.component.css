@@ -6,12 +6,12 @@
 }
 /* Vertical line arrow */
 .vertical-line:after {
-	content: "\e006";
-	font-family: 'squarespace-ui-font';
-	position: absolute;
-	bottom: -10px;
-	left: 50%;
-	transform: translateX(-50%) rotate(180deg);
+	content		: "\e006";
+	font-family	: 'squarespace-ui-font';
+	position	: absolute;
+	bottom		: -10px;
+	left		: 50%;
+	transform	: translateX(-50%) rotate(180deg);
 }
 .vertical-line {
 	position: relative;
@@ -70,10 +70,11 @@
 	font-weight	: 400;
 	font-size	: 14px;
 }
-
-.carousel-item-section {
+.carousel-external {
 	height		: 80vh;
-    background	: red;
+}
+.carousel-item-section {
+	height		: 100%;
 }
 .carousel-control-next, .carousel-control-prev {
     width		: 4%;
@@ -85,3 +86,19 @@
 	transition	:	all 0.5s;
 	width		: 100% !important;
 }
+swiper-container {
+	display	: block;
+	width	: 100%;
+}
+swiper-slide {
+	display			: flex;
+	align-items		: center;
+	justify-content	: center;
+	height			: 100%;
+}
+img {
+	object-fit	: cover;
+	height		: 100%;
+	width		: 100%;
+}
+ul.li {list-style-type: circle;}
