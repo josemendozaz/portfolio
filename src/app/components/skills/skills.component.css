@@ -79,3 +79,47 @@
 	70% { transform: translate( 0px, 20px ); }
 	100% { transform: translate( 0px, 0px ); }
 }
+/* Extra pequeño (móviles pequeños, menos de 576px) */
+@media (max-width: 575.98px) {
+	.float-end-custom {
+    	float			: none;
+    	margin-right	: auto;
+		margin			: auto;
+		margin-top		: 10vw;
+	}
+	.float-start-custom {
+		float		: none;
+    	margin-left	: auto;
+		margin		: auto;
+		margin-top	: 10vw;
+	}
+	.skills-items {
+		margin-top		: 5vw;
+		margin-bottom	: 5vw;
+	}
+}
+
+/* Pequeño (móviles grandes) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Estilos para móviles grandes */
+}
+
+/* Mediano (tablets verticales) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Estilos para tablets */
+}
+
+/* Grande (laptops y tablets en horizontal) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Estilos para pantallas medianas/grandes */
+}
+
+/* Extra grande (desktops grandes) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* Estilos para monitores grandes */
+}
+
+/* Extra extra grande (pantallas muy grandes, 4K) */
+@media (min-width: 1400px) {
+  /* Estilos para pantallas gigantes */
+}
