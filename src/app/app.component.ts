@@ -45,8 +45,7 @@ import { ScreenLoadingService } from './services/screen-loading.service';
  * @description		Componente que contiene la sección de trabajos realizados
  */
 export class AppComponent {
-	@HostListener('window:resize', ['$event'])
-	@HostListener("wheel", ["$event"])
+	// @HostListener('window:resize', ['$event'])
 	/**
 	 * @var				loading : boolean
 	 * @description		variable boolean que indica si se debe mostrar el spinner de carga
@@ -71,6 +70,7 @@ export class AppComponent {
 	 * @method			onScroll
 	 * @description		Método para el scroll
 	 */
+	@HostListener("wheel", ["$event"])
 	public onScroll( event: WheelEvent ) {}
 	/**
 	 * @function		constructor

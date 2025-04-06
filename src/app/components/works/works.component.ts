@@ -1,6 +1,12 @@
+/**
+ * IMPORT (MODULES/COMPONENTS/SERVICES)
+ */
 import { Component, CUSTOM_ELEMENTS_SCHEMA, NgZone } from '@angular/core';
 import { WorksService } from '../../services/works.service';
 import { Work } from '../../interfaces/work.interface';
+import lgZoom from 'lightgallery/plugins/zoom';
+import { LightgalleryModule } from 'lightgallery/angular';
+import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import { ScreenLoadingService } from '../../services/screen-loading.service';
 /**
  * @class			WorksComponent
@@ -8,8 +14,11 @@ import { ScreenLoadingService } from '../../services/screen-loading.service';
  */
 @Component({
 	selector	: 'app-works',
+	standalone	: true,
 	schemas		: [CUSTOM_ELEMENTS_SCHEMA],
-	imports		: [],
+	imports		: [
+		LightgalleryModule
+	],
 	templateUrl	: './works.component.html',
 	styleUrl	: './works.component.css'
 })
@@ -35,6 +44,23 @@ export class WorksComponent {
 	 */
 	works : Work[] = [];
 	/**
+	 * @var				settings
+	 * @description		Almacena la configuración para el LightgalleryModule
+	 */
+    settings	= {
+        counter		: false,
+        plugins		: [ lgZoom ],
+		download	: false,
+		zoom 		: false
+    };
+	/**
+	 * @method			onBeforeSlide
+	 * @description		Almacena todos los proyectos consultados en el servicio WorksService
+	 */
+    onBeforeSlide	= ( detail: BeforeSlideDetail )	: void => {
+		const { index, prevIndex } = detail;
+    };
+	/**
 	 * @method			constructor
 	 * @description		Constructor del componente
 	 */
@@ -51,17 +77,13 @@ export class WorksComponent {
 	 * @description		Ciclo de vida Init, carga despues de inicializar la vista
 	 */
 	ngAfterViewInit(): void {
-		const bootstrapCarousel = document.getElementById('carouselExternal')!;
-
+		const bootstrapCarousel	= document.getElementById('carouselExternal')!;
 		if (!bootstrapCarousel) return;
-
 		bootstrapCarousel.addEventListener('slid.bs.carousel', () => {
 			this.slideChange	= true;
-			console.log('📸 Slide cambiado!');
 			this.initSwipers();
 		});
-		// Inicialización en primer render
-		this.initSwipers();
+		this.initSwipers(); // Inicialización en primer render
 	}
 	/**
 	 * @method			initSwipers
@@ -74,19 +96,14 @@ export class WorksComponent {
 			const activeItem = document.querySelector('.carousel-item.active');
 			if (!activeItem) return;
 			const swiperEl = activeItem.querySelector('swiper-container') as any;
-			if (!swiperEl) {
-				console.warn('❗ No se encontró swiper en el slide activo');
-				return;
-			}
+			if (!swiperEl) { return; }
 			if (!swiperEl.swiper) {
 				swiperEl.initialize?.();
-				console.log('✅ Swiper inicializado en slide visible');
 				setTimeout( () => { if ( this.slideChange ) { this.screenLoading	= false; } }, 20000);
 			} else {
 				swiperEl.swiper.update();
 				swiperEl.swiper.slideTo(0);
 				swiperEl.swiper.autoplay?.start();
-				console.log('🔄 Swiper actualizado en slide visible');
 				setTimeout( () => { if ( this.slideChange ) { this.screenLoading	= false; } }, 20000);
 			}
 		}, 200);

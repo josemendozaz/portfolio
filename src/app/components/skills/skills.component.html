@@ -7,10 +7,10 @@
 			<div class="col-12 text-center">
 				<h2 class="text-light-green" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Habilidades</h2>
 				<div class="arrow m-auto" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"></div>
-				<h5 class="mt-4 text-light-green" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Me esfuerzo por nunca dejar de aprender y mejorar</h5>
+				<h5 class="mt-4 text-light-green" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Combino pasión por el código con una mentalidad en constante evolución. Cada tecnología que domino es una herramienta más para construir soluciones sólidas, modernas y escalables. Mi enfoque está en aprender siempre, mejorar continuamente y desarrollar con propósito.</h5>
 				<div class="container mt-4">
 					<div class="row">
-						<div class="col-12 col-md-6" data-aos="zoom-in-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+						<div class="col-12 col-md-6" [attr.data-aos]="( isMobile ) ? 'zoom-in' : 'zoom-in-right'"   data-aos-easing="ease-out-cubic" data-aos-duration="1000">
 							<div class="alert-box-pc alert alert-success alert-width float-end-custom" role="alert">
 								<div class="col-12">
 									<img class="skill-icon-enviroment" src="/skills/icon-monitor.png" alt="">
@@ -27,7 +27,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-6" data-aos="zoom-in-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+						<div class="col-12 col-md-6" [attr.data-aos]="( isMobile ) ? 'zoom-in' : 'zoom-in-left'"   data-aos-easing="ease-out-cubic" data-aos-duration="1000">
 							<div class="alert-box-mobile alert alert-success alert-width float-start-custom" role="alert">
 								<div class="col-12">
 									<img class="skill-icon-enviroment" src="/skills/icon-smartphone.png" alt="">

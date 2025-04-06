@@ -2,31 +2,31 @@
 	<div class="menu w-100">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-md-4 cursor-pointer text-center text-md-start nav-header-name">
+				<div class="col-4 col-md-4 cursor-pointer text-center text-md-start nav-header-name">
 					<h1 class="d-inline text-light-green"> {{ '\<c/>' }} </h1>
 					<h2 class="d-inline text-white m-auto">José Mendoza</h2>
 				</div>
-				<div class="col-12 col-md-1"></div>
-				<div class="col-6 col-md-1 text-center text-white m-auto cursor-pointer link-a">
+				<div class="d-none d-inline col-md-1"></div>
+				<div class="col-2 col-md-1 text-center text-white m-auto cursor-pointer link-a">
 					<a href="javascript:void(0)" (click)="onClickButton( 'skills' )">
 						Habilidades
 					</a>
 				</div>
-				<div class="col-6 col-md-2 text-center text-white m-auto cursor-pointer link-a">
+				<div class="col-2 col-md-2 text-center text-white m-auto cursor-pointer link-a">
 					<a href="javascript:void(0)" (click)="onClickButton( 'works' )">
 						Trabajos
 					</a>
 				</div>
-				<div class="col-6 col-md-2 text-center text-white m-auto cursor-pointer link-a">
-					<img class="text-light-green" src="/social-network/icon-instagram.png" alt="">
+				<div class="col-1 col-md-2 text-center text-white m-auto cursor-pointer link-a">
 					<a href="https://www.instagram.com/josemendozaz93/" target="_blank">
-						&nbsp;Instagram
+						<img class="text-light-green" src="/social-network/icon-instagram.png" alt="">
+						<span class="d-none d-md-inline">&nbsp;&nbsp;Instagram</span>
 					</a>
 				</div>
-				<div class="col-6 col-md-2 text-center text-white m-auto cursor-pointer link-a">
-					<img class="text-light-green" src="/social-network/github.png" alt="">
+				<div class="col-2 col-md-2 text-center text-white m-auto cursor-pointer link-a">
 					<a href="https://github.com/josemendozaz" target="_blank">
-						&nbsp;Github
+						<img class="text-light-green" src="/social-network/github.png" alt="">
+						<span class="d-none d-md-inline">&nbsp;&nbsp;Github</span>
 					</a>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 			<h1 class="col-12 text-light-green text-center h1-super-title pb-2">
 				Desarrollador de Software
 			</h1>
-			<div class="col-12 col-md-4 block-one" data-aos="zoom-in-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+			<div class="col-12 col-sm-12 col-md-4 block-one" data-aos="zoom-in-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
 				<div class="card-info m-auto" >
 					<div class="col-12 mt-2 text-center">
 						<img class="avatar" src="/image/foto_jmz_profile.png" alt="">
@@ -64,7 +64,7 @@
 								<img class="text-light-green" src="icon-profile/icon-mail.png" alt="">
 							</div>
 							<div class="col-10 text-start">
-								<span class="text-light-green">
+								<span class="text-light-green text-break">
 									{{ 'josemendozaz1993@gmail.com' }}
 								</span>
 							</div>
@@ -73,7 +73,7 @@
 								<img class="text-light-green" src="icon-profile/icon-map-pin.png" alt="">
 							</div>
 							<div class="col-10 text-start">
-								<span class="text-light-green">
+								<span class="text-light-green text-break">
 									Venezuela
 								</span>
 							</div>
@@ -82,7 +82,7 @@
 								<img class="text-light-green" src="icon-profile/icon-briefcase.png" alt="">
 							</div>
 							<div class="col-10 text-start">
-								<span class="text-light-green">
+								<span class="text-light-green text-break">
 									Freelancer
 								</span>
 							</div>
@@ -91,7 +91,7 @@
 								<img class="text-light-green" src="icon-profile/icon-link.png" alt="">
 							</div>
 							<div class="col-10 text-start">
-								<span class="text-light-green">
+								<span class="text-light-green text-break">
 									portfolio-jmz.netlify.app
 								</span>
 							</div>
@@ -118,7 +118,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-md-6 m-auto block-two" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+			<div class="col-12 col-sm-12 col-md-5 m-auto block-two" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
 				<div class="box-about-me text-light-green">
 					<small class="small-about-box"> {{ '\<h1>' }} </small>
 					<h1 class="ps-3 fw-bold">
@@ -139,29 +139,29 @@
 				</div>
 			</div>
 			<!-- data-aos="zoom-in-left" data-aos-easing="ease-out-cubic" data-aos-duration="500" -->
-			<div class="col-12 col-md-2 m-auto block-three" >
+			<div class="col-12 col-sm-12 col-md-3 m-auto block-three">
 				<div class="box-items p-4">
 					<div class="row pt-4 pb-4">
-						<div class="col-2 justify-content-center">
-							<h2>4</h2>
+						<div class="col-2 justify-content-center m-auto">
+							<h2 class="m-auto">4</h2>
 						</div>
-						<div class="col-10 justify-content-center">
+						<div class="col-10 text justify-content-center m-auto">
 							Lenguajes de Programación
 						</div>
 					</div>
 					<div class="row pb-4">
-						<div class="col-2 justify-content-center">
-							<h2>5</h2>
+						<div class="col-2 justify-content-center m-auto">
+							<h2 class="m-auto">5</h2>
 						</div>
-						<div class="col-10 justify-content-center">
+						<div class="col-10 text justify-content-center m-auto">
 							Herramientas de desarollo
 						</div>
 					</div>
 					<div class="row pb-4">
-						<div class="col-2 justify-content-center">
-							<h2>6</h2>
+						<div class="col-2 justify-content-center m-auto">
+							<h2 class="m-auto">6</h2>
 						</div>
-						<div class="col-10 justify-content-center">
+						<div class="col-10 text justify-content-center m-auto">
 							Años de Experiencia
 						</div>
 					</div>

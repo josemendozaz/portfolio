@@ -1,10 +1,10 @@
-<div class="skills pt-5">
+<div class="works pt-5">
 	<div class="container">
-		<div class="row row-skills-title pt-2">
+		<div class="row row-works-title pt-2">
 			<div class="col-12 text-center">
 				<h2 class="text-light-green">Proyectos</h2>
 				<div class="arrow m-auto"></div>
-				<h5 class="mt-4 text-light-green">Proyetos desarrollados</h5>
+				<h5 class="mt-4 text-light-green">Cada proyecto es una historia de innovación, retos superados y soluciones a medida. A continuación te presento una selección de trabajos donde aplico mi experiencia técnica para dar vida a plataformas funcionales, modernas y visualmente atractivas. Explora cada uno desde una perspectiva visual y técnica, con descripciones claras y un vistazo directo a su funcionamiento.</h5>
 			</div>
 		</div>
 		<div class="row">
@@ -32,7 +32,11 @@
 													@if ( work.imgs.length >= 3 ) {
 														@for ( img of work.imgs; track $index ) {
 															<swiper-slide>
-																<img [src]="'/works/projects/' + work.alias + '/' + img" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+																<lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+																	<a [href]="'/works/projects/' + work.alias + '/' + img">
+																		<img [src]="'/works/projects/' + work.alias + '/' + img" class="img-fluid w-100 h-100" style="object-fit: cover;" [alt]="'Preview ' + work.title" />
+																	</a>
+																</lightgallery>
 															</swiper-slide>
 														}
 													}
