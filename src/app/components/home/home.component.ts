@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
 import * as AOS from 'aos';
-import Bowser from "bowser"; // TypeScript
+import Bowser from "bowser";
 /**
  * @class			WorksComponent
  * @description		Componente que contiene la sección de trabajos realizados
