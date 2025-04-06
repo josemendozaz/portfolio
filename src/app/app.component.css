@@ -168,6 +168,9 @@
 	.works-section {
 		height	: auto!important;
 	}
+	.works-section-bg {
+		background-color: rgba(10, 11, 13, 1);
+	}
 }
 
 /* Pequeño (móviles grandes) */
@@ -181,6 +184,9 @@
 	}
 	.works-section {
 		height	: auto!important;
+	}
+	.works-section-bg {
+		background-color: rgba(10, 11, 13, 1);
 	}
 }
 

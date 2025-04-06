@@ -41,35 +41,6 @@
 .arrow {
 	background	: linear-gradient(to right, transparent 5px, #98FAEC 2px, #98FAEC calc(100% - 5px), transparent calc(100% - 30px)); /* Línea delgada */
 }
-.alert-width {
-	width	: 18rem;
-}
-.float-end-custom {
-	float: right;
-	margin-right: 60px;
-}
-.float-start-custom {
-	float: left;
-	margin-left: 60px;
-}
-.skill-icon-enviroment {
-	width	: 32px;
-}
-.alert-box-pc {
-	border-left-color	: #f62BA0;
-	border-left-width	: 5px;
-}
-.alert-box-mobile {
-	border-left-color	: #0054e9;
-	border-left-width	: 5px;
-}
-.skills-img {
-	width	: 7rem;
-}
-.text-skills {
-	font-weight	: 400;
-	font-size	: 14px;
-}
 .carousel-external {
 	height		: 80vh;
 }
@@ -102,8 +73,18 @@ img {
 	width		: 100%;
 }
 ul.li {list-style-type: circle;}
-
-
+.works h2 {
+	font-size	: 2vw;
+}
+.works h5 {
+	font-size	: 1.3vw;
+}
+.works .works-title {
+	font-size	: 2vw;
+}
+.works .works-description {
+	font-size	: 1vw;
+}
 /* ---------- RESPONSIVO ---------- */
 /* ////////// RESPONSIVO IPHONE / ANDROID / TABLE ////////// */
 /* iPhone Portrait */
@@ -167,8 +148,25 @@ ul.li {list-style-type: circle;}
 /* ////////// RESPONSIVO GENERAL ////////// */
 /* Extra pequeño (móviles pequeños, menos de 576px) */
 @media (max-width: 575.98px) {
+	.row-works-title h2 {
+		font-size	: 5vw;
+	}
+	.row-works-title h5 {
+		font-size		: 16px!important;
+		margin-bottom	: 10vw;
+	}
+	.works .works-title {
+		font-size	: 5vw;
+	}
+	.works .works-description {
+		font-size	: 16px!important;
+	}
 	.carousel-external {
 		height: auto !important;
+	}
+	.carousel-internal-column {
+		padding-left	: 1rem !important;
+		padding-right	: 1rem !important;
 	}
 }
 /* Pequeño (móviles grandes) */
@@ -176,6 +174,18 @@ ul.li {list-style-type: circle;}
 	/* Estilos para móviles grandes */
 	.carousel-external {
 		height: auto !important;
+	}
+	.works h2 {
+    	font-size: 4vw;
+	}
+	.works h5 {
+    	font-size: 2vw;
+	}
+	.works .works-title {
+		font-size: 4vw;
+	}
+	.works .works-description {
+    	font-size: 2vw;
 	}
 }
 /* Mediano (tablets verticales) */

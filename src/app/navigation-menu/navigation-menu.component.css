@@ -25,15 +25,36 @@
 }
 /* Extra pequeño (móviles pequeños, menos de 576px) */
 @media (max-width: 575.98px) {
+	/* .navigation-bar-micro-containe {
+		display	: none!important;
+	} */
 	.navigation-bar-micro img {
 		width	: 15px;
 	}
 	.navigation-bar-micro {
+		border	: 1px solid #fff;
+		height: unset;
 		padding	: 0px;
-		width	: 33px;
+		width	: 100%;
 	}
 	.navigation-bar-micro-container {
-		left	: 5px;
+		top			: 0;
+        left		: 0;
+        right		: 0;
+        margin		: auto;
+        width		: 70%;
+        height		: 95%;
+		transform	: translateY(-100%);
+		opacity		: 0;
+		transition	: transform 0.2s ease, opacity 0.4s ease;
+	}
+	.navigation-bar-micro-container.show {
+		transform	: translateY(0%);
+		opacity		: 1;
+	}
+	.links-divs {
+		margin-top		: .25rem !important;
+		margin-bottom	: .25rem !important;
 	}
 }
 /* iPhone Portrait */
@@ -115,11 +136,29 @@
 		width	: 15px;
 	}
 	.navigation-bar-micro {
+		border	: 1px solid #fff;
+		height: unset;
 		padding	: 0px;
-		width	: 33px;
+		width	: 100%;
 	}
 	.navigation-bar-micro-container {
-		left	: 15px;
+		top			: 0;
+        left		: 0;
+        right		: 0;
+        margin		: auto;
+        width		: 70%;
+        height		: 95%;
+		transform	: translateY(-100%);
+		opacity		: 0;
+		transition	: transform 0.2s ease, opacity 0.4s ease;
+	}
+	.navigation-bar-micro-container.show {
+		transform	: translateY(0%);
+		opacity		: 1;
+	}
+	.links-divs {
+		margin-top		: .25rem !important;
+		margin-bottom	: .25rem !important;
 	}
 }
 

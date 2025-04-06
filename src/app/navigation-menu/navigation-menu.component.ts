@@ -1,7 +1,7 @@
 /**
  * IMPORT (MODULES/COMPONENTS/SERVICES)
  */
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 /**
  * @class			NavigationMenuComponent
@@ -18,11 +18,16 @@ import { RouterModule } from '@angular/router';
  * @description		Componente que contiene el menu de navegación flotante
  */
 export class NavigationMenuComponent {
+	showNavbar = false;
 	/**
 	 * @function		constructor
 	 * @description		Constructor del componente
 	 */
 	constructor() {}
+	@HostListener('window:scroll', [])
+	onWindowScroll() {
+		this.showNavbar = window.scrollY > 100;
+	}
 	/**
 	 * @function		onClickButton
 	 * @description		Botón del nav menu flotante

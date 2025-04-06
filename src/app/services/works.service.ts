@@ -1,12 +1,24 @@
+/**
+ * IMPORT (MODULES/COMPONENTS/SERVICES)
+ */
 import { Injectable } from '@angular/core';
 import { Work } from '../interfaces/work.interface';
-
+/**
+ * @class			WorksService
+ * @description		Servicio de tarbajos realizados
+ */
 @Injectable({
 	providedIn	: 'root'
 })
-
+/**
+ * @class			WorksService
+ * @description		Servicio de tarbajos realizados
+ */
 export class WorksService {
-
+	/**
+	 * @var				works
+	 * @description		Arreglo de objetos que almacena todos los proyectos realizados
+	 */
 	works : Work[] = [
 		{
 			id			: 1,
@@ -58,36 +70,15 @@ export class WorksService {
 			imgs 		: ['1.png','2.png','3.png','4.png','5.png','6.png','7.png','8.png','9.png','10.png','11.png','12.png']
 		},
 	]
-
+	/**
+	 * @description		Constructor del Servicio de proyectos realizados
+	 */
 	constructor() { }
-
-
+	/**
+	 * @method			getAll
+	 * @description		Metodo que consulta todos los proyectos realizados
+	 */
 	getAll() {
 		return this.works;
 	}
-
-
-	// isWork( idWork : number ) {
-	// 	return this.works.id === idWork;
-	//   }
-
-	// getWork( id : number ) {
-	// 	return this.works.find( id );
-	// }
-
-
-	// const inventario = [
-	// 	{ nombre: "manzanas", cantidad: 2 },
-	// 	{ nombre: "bananas", cantidad: 0 },
-	// 	{ nombre: "cerezas", cantidad: 5 },
-	//   ];
-
-	//   function esCereza(fruta) {
-	// 	return fruta.nombre === "cerezas";
-	//   }
-
-	//   console.log(inventario.find(esCereza));
-
-
-
 }

@@ -89,7 +89,6 @@ export class AppComponent {
 		this.isBrowser = this.isPlataformBrowserService.checkPlatformBrowser( this.platformId );
 		if ( this.isBrowser ) {
 			this.innerHeight = window.screen.height;
-			console.log( this.innerHeight );
 		}
 		router.events.subscribe( this._navigationInterceptor.bind(this) );
 	}
@@ -103,7 +102,7 @@ export class AppComponent {
 		if ( event instanceof NavigationStart ) { this.ngZone.runOutsideAngular(() => { this.loading = false; }); }
 		//// Se establecen el estado de la pantalla de carga en falso en caso de: terminar de cargar la ruta o de que falle alguna solicitud
 		if ( event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError ) { this.loading = false; }
-		setTimeout( () => { this.screenLoadingService.setValue	= this.loading; }, 2000);
+		setTimeout( () => { this.screenLoadingService.setValue	= this.loading; }, 200);
   	}
 	/**
 	 * @method			ngAfterViewInit

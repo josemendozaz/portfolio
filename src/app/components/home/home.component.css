@@ -9,6 +9,9 @@
 	color 			: white;
 	font-size		: 1.05vw;
 }
+.nav-header .icon-networking {
+	width	: 1vw;
+}
 .h1-super-title {
 	/* font-size	: 55px; */
 	font-size	: 3.6vw;
@@ -132,6 +135,9 @@
 /* ////////// RESPONSIVO GENERAL ////////// */
 /* Extra pequeño (móviles pequeños, menos de 576px) */
 @media (max-width: 575.98px) {
+	.nav-header .icon-networking {
+		width	: 4vw!important;
+	}
 	.nav-header-name h1 {
 		font-size		: 3vw; /* 8 */
 	}
@@ -157,11 +163,14 @@
 		margin-top		: 5vw!important;
 		margin-bottom	: 10vw !important;
 	}
-	.card-info span {
-		font-size: 12px!important;
+	.about-me .card-info {
+		width	: 90%;
 	}
-	.tag {
-    	font-size: 8px!important;
+	.about-me .card-info span {
+		font-size: 14px!important;
+	}
+	.about-me .tag {
+    	font-size: 2.7vw!important;
 	}
 	.box-about-me {
     	padding-left	: 15vw;
@@ -176,10 +185,10 @@
 		margin			: auto;
 	}
 	.about-me .block-three .box-items h2 {
-		font-size	: 13vw;
+		font-size	: 9vw;
 	}
 	.about-me .block-three .box-items .text {
-		font-size	: 5vw;
+		font-size	: 4vw;
 	}
 }
 /* Pequeño (móviles grandes) */
@@ -213,6 +222,9 @@
 	}
 	.about-me .block-three .box-items .text {
 		font-size	: 3vw;
+	}
+	.nav-header .icon-networking {
+		width: 3vw;
 	}
 }
 /* Mediano (tablets verticales) */

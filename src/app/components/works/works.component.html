@@ -4,7 +4,7 @@
 			<div class="col-12 text-center">
 				<h2 class="text-light-green">Proyectos</h2>
 				<div class="arrow m-auto"></div>
-				<h5 class="mt-4 text-light-green">Cada proyecto es una historia de innovación, retos superados y soluciones a medida. A continuación te presento una selección de trabajos donde aplico mi experiencia técnica para dar vida a plataformas funcionales, modernas y visualmente atractivas. Explora cada uno desde una perspectiva visual y técnica, con descripciones claras y un vistazo directo a su funcionamiento.</h5>
+				<h5 class="mt-4 text-white">Cada proyecto es una historia de innovación, retos superados y soluciones a medida. A continuación te presento una selección de trabajos donde aplico mi experiencia técnica para dar vida a plataformas funcionales, modernas y visualmente atractivas. Explora cada uno desde una perspectiva visual y técnica, con descripciones claras y un vistazo directo a su funcionamiento.</h5>
 			</div>
 		</div>
 		<div class="row">
@@ -16,7 +16,7 @@
 								<div class="carousel-item carousel-item-section {{ work.id == 1 ? 'active' : '' }}">
 									<div class="container">
 										<div class="row">
-											<div class="col-12 col-md-7 m-auto ps-5 pe-5">
+											<div class="carousel-internal-column col-12 col-md-7 m-auto ps-5 pe-5">
 												<swiper-container
 													init="false"
 													speed="800"
@@ -43,8 +43,8 @@
 												</swiper-container>
 											</div>
 											<div class="col-12 col-md-5 pt-5 pb-5">
-												<h3 class="text-start text-light-green">{{ work.title }}</h3><br>
-												<p class="text-justify text-light-green" [innerHtml]="work.description">{{ work.description }}</p>
+												<h3 class="text-center text-md-start text-white works-title">{{ work.title }}</h3><br>
+												<p class="text-start text-white works-description" [innerHtml]="work.description">{{ work.description }}</p>
 											</div>
 										</div>
 									</div>
